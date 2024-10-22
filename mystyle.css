@@ -81,18 +81,20 @@ nav .nav_items .item a:hover {
 /* ========= Home style Start ========= */
 .home {
     padding: 0 100px;
+    height: 85vh;
 }
 
 .home .container {
     display: flex;
-    padding: 15px 15px;
+    padding: 25px 15px;
     width: 100%;
-    height: 82vh;
+    height: 100%;
     background-color:  var(--sup-bg-color);
     border-radius: 12px;
     box-shadow: 0 4px 8px #5a4840;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .home .container .content {
@@ -100,17 +102,16 @@ nav .nav_items .item a:hover {
     height: 100%;
     padding-right: 20px; 
 }
-
 .home .container .content .project_img {
     display: flex;
-    flex-wrap: wrap; 
+    padding-top: 5px;
 }
 
 .home .container .content .project_img img {
     flex: 0 0 50%;
     max-width: calc(50% - 20px);
     border-radius: 5%;
-    margin: 15px 10px;
+    margin: 0 10px;
     box-shadow: 0 4px 8px rgba(90, 72, 64, 0.7); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -145,7 +146,7 @@ nav .nav_items .item a:hover {
 
 .home .container .vid_container {
     flex: 0 0 25%;
-    width: 25%;
+    max-width: 25%;
     height: 100%;
 }
 
@@ -192,8 +193,6 @@ nav .nav_items .item a:hover {
 .home .container .vid_container .contact-me .contact-items .item i:last-child {
     margin-right: 0;
 }
-
-
 /* ========= Home style End ========= */
 /* ========= Journey style start ========= */
 .Myjourney {
@@ -347,3 +346,46 @@ nav .nav_items .item a:hover {
     font-family: "Varela Round", system-ui;
 }
 /* ========= Future style End ========= */
+/* ========= Home responsive Start ========= */
+@media (max-width: 768px) {
+    .home {
+        padding: 0 20px;
+    }
+
+    .home .container {
+        display: block;
+        height: auto;
+    }
+    .home .container .content {
+        padding: 0;
+    }
+
+    .home .container .content h1 {
+        font-size: 24px;
+    }
+
+    .home .container .content p {
+        font-size: 16px;
+    }
+    .home .container .content .project_img {
+        justify-content: center;
+    }
+    .home .container .content .project_img img {
+        flex: 0 0 40%; 
+        max-width: 40%;
+    }
+
+    .home .container .vid_container {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    .home .container .vid_container .video {
+        display: flex;
+        width: 25%;
+        height: auto;
+    }
+}
+/* ========= Home responsive End ========= */
+
